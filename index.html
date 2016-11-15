@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Homework js 23-24</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	<script data-main="script/main.js" src="script/require.js"></script>
+</head>
+
+
+<body>
+	<script type="text/template" id="wrapper-template">
+		<div class="wrapper">
+			<div class="controlls">
+				<input type="text" class="item-value" placeholder="Add something to the list!">
+				<button class="item-add"> <i class="fa fa-plus"></i>Add</button>
+			</div>
+			<ul class="item-list">
+			</ul>
+		</div>
+	</script>
+
+	<script type="text/template" id="list-template">
+		<% for (var i = 0; i < data.length; i++){ %>
+			<li>
+				<span data-show="<%= data[i] %>" class="item-show"><%= data[i]%></span>
+				<input type="text" class="item-edit" data-value="<%= data[i]%>">
+				<span data-value="<%= data[i]%>" class="item-delete"><i class="fa fa-remove"></i></span>
+			</li>
+		<% } %>	
+	</script>
+
+</body>
+</html>
